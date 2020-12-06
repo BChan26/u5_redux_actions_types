@@ -123,6 +123,10 @@ The `CreateNewTodo` should accept a form value as an argument.
 
 The `RemoveTodo` should accept an index as an argument.
 
+Change the `NEW_TODO` case in the `TodoReducer` to your new NEW_TODO variable.
+
+Add a new case to the `TodoReducer` for REMOVE_TODO. It should return a new object with everything in state for now. **Hint**: Look at the default case.
+
 ## Resources
 
 [Redux Actions For Beginners](https://www.tutorialspoint.com/redux/redux_actions.htm)
