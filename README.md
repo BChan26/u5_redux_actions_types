@@ -4,6 +4,11 @@
 
 - Have part two of the Todo List working.
 
+## Objectives
+
+- Learn about actions and types
+- Build out actions and types
+
 ## What Are Actions
 
 In redux actions are functions that provide a type and a payload, these functions are used to update our state. Redux uses the types to track which and any change was performed at any given time.
