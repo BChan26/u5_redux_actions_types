@@ -13,7 +13,7 @@
 
 In redux actions are functions that provide a type and a payload, these functions are used to update our state. Redux uses the types to track which and any change was performed at any given time.
 
-We `dispatch` actions from our components. By importing our our actions into the component we want to use them in.
+We `dispatch` actions from our components by importing our actions into the components we want to use them in.
 
 Heres an example of an action:
 
