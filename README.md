@@ -1,14 +1,20 @@
 # Redux Actions and Types
 
-### Requirements
+![](https://redux.js.org/img/tutorials/essentials/ReduxDataFlowDiagram.gif)
 
-- Have part two of the Todo List working.
+## Overview
+In this lesson, we'll be learning about Actions in Redux, specifically how and where they fit in with the reducers that we've set up thus far. We'll also breakdown the types and payloads involved with actions.
 
 ## Objectives
 
 - Learn about actions and types
 - Build out actions and types
 
+
+## Getting Started
+- Have part two of the Todo List working.
+
+___
 ## What Are Actions
 
 In redux actions are functions that provide a type and a payload, these functions are used to update our state. Redux uses the types to track which and any change was performed at any given time.
@@ -107,6 +113,7 @@ const TodoReducer = (state = initialState, action) => {
 export default TodoReducer
 ```
 
+___
 ## You Do 10 Min
 
 Create two new types:
@@ -126,6 +133,10 @@ The `RemoveTodo` should accept an index as an argument.
 Change the `NEW_TODO` case in the `TodoReducer` to your new NEW_TODO variable.
 
 Add a new case to the `TodoReducer` for REMOVE_TODO. It should return a new object with everything in state for now. **Hint**: Look at the default case.
+
+___
+## Recap
+In this lesson, we learned about writing functions for actions, setting up a payload, and creating types associated with each action.
 
 ## Resources
 
