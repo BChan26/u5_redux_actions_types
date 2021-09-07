@@ -139,5 +139,4 @@ ___
 In this lesson, we learned about writing functions for actions, setting up a payload, and creating types associated with each action.
 
 ## Resources
-
-[Redux Actions For Beginners](https://www.tutorialspoint.com/redux/redux_actions.htm)
+- [Redux Actions For Beginners](https://www.tutorialspoint.com/redux/redux_actions.htm)
