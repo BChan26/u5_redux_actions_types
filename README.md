@@ -3,23 +3,23 @@
 ![](https://redux.js.org/img/tutorials/essentials/ReduxDataFlowDiagram.gif)
 
 ## Overview
-In this lesson, we'll be learning about Actions in Redux, specifically how and where they fit in with the reducers that we've set up thus far. We'll also breakdown the types and payloads involved with actions.
+In this lesson, we'll be learning about Actions in Redux, specifically how and where they fit in with the Reducers that we've set up thus far. We'll also breakdown the Types and Payloads involved with Actions.
 
 ## Objectives
 
-- Learn about actions and types
-- Build out actions and types
+- Learn about Actions and Types
+- Build out Actions and Types
 
 
 ## Getting Started
-- Have part two of the Todo List working.
+- Have the code from the `redux reducers` lesson working.
 
 ___
-## What Are Actions
+## What Are Actions?
 
-In redux actions are functions that provide a type and a payload, these functions are used to update our state. Redux uses the types to track which and any change was performed at any given time.
+In Redux, Actions are functions that provide a Type and a Payload. These functions are used to update our state. Redux uses the Types to track if any change was performed and on which piece of state at any given time.
 
-We `dispatch` actions from our components by importing our actions into the components we want to use them in.
+We `dispatch` Actions from our components by importing our Actions into the components we want to use them in.
 
 Heres an example of an action:
 
@@ -30,14 +30,14 @@ const AddTodo = (todo) => ({
 })
 ```
 
-Our action returns an object with the type of action we are performing and a payload being the item we want to add or use to update our state.
+Our Action returns an object with the type of action we are performing and a Payload being the item we want to add or use to update our state.
 
 ## Building Actions For Our Todo List
 
 Let's start by creating a `types.js` file in our `store` directory.
 
-Next create an `actions` folder inside of the `store` directory.
-In the `actions` folder create a new file called `TodoActions.js`.
+Next, create an `actions` folder inside of the `store` directory.
+In the `actions` folder, create a new file called `TodoActions.js`.
 This file will hold all of the actions to handle our `todoState`.
 
 Add the following function to `TodoActions.js`:
@@ -52,20 +52,20 @@ export const AddTodo = (todo) => ({
 Let's break this down:
 
 - We're exporting a function called `AddTodo`.
-- Accepts a todo as an argument.
-- It implicity returns an object with a type of `ADD_TODO` and a payload being the todo we want to add.
+- Accepts a `todo` as an argument.
+- It implicity returns an object with a type of `ADD_TODO` and a Payload of the todo we want to add.
 
-Now one thing you may notice is we're setting the type here as a string that we typed in. This is fine and good, but what if we make a mistake while typing it? In that case Redux has no idea what this function is supposed to be doing. This is where our `types` file comes in. We can store our action types here as variables and re-use them without having to worry about typos as our application grows.
+Now, one thing you may notice is that we're setting the Type here as a string that we typed in. This is all well and good, but what if we make a mistake while typing it? In that case, Redux has no idea what this function is supposed to be doing. This is where our `types` file comes in. We can store our Action Types here as variables and re-use them without having to worry about typos as our application grows.
 
 ## Declaring Action Types
 
-Open your `types.js` file. Let's add our first type:
+Open your `types.js` file. Let's add our first Type:
 
 ```js
 export const ADD_TODO = 'ADD_TODO'
 ```
 
-Now in your `TodoActions` import this type, remember since we're using the `export const` syntax we'll have to use the destructuring import syntax.
+Now in your `TodoActions`, import this Type. Remember, since we're using the `export const` syntax we'll have to use the destructuring import syntax.
 
 Your `TodoActions.js` file should look like the following:
 
@@ -78,7 +78,7 @@ export const AddTodo = (todo) => ({
 })
 ```
 
-Now swap out the type in the `AddTodo` function to our new `ADD_TODO` variable.
+Now, swap out the Type in the `AddTodo` function to our new `ADD_TODO` variable.
 
 ```js
 import { ADD_TODO } from '../types'
@@ -89,7 +89,7 @@ export const AddTodo = (todo) => ({
 })
 ```
 
-Now in your `TodoReducer.js` do the same.
+Now, in your `TodoReducer.js`, do the same:
 
 ```js
 import { ADD_TODO } from '../types'
@@ -114,14 +114,14 @@ export default TodoReducer
 ```
 
 ___
-## You Do 10 Min
+## You Do: 10 Mins
 
-Create two new types:
+Create two new Types:
 
 - NEW_TODO
 - REMOVE_TODO
 
-Create two new actions:
+Create two new Actions:
 
 - CreateNewTodo
 - RemoveTodo
@@ -136,7 +136,7 @@ Add a new case to the `TodoReducer` for REMOVE_TODO. It should return a new obje
 
 ___
 ## Recap
-In this lesson, we learned about writing functions for actions, setting up a payload, and creating types associated with each action.
+In this lesson, we learned about writing functions for Actions, setting up a Payload, and creating Types associated with each Action.
 
 ## Resources
 - [Redux Actions For Beginners](https://www.tutorialspoint.com/redux/redux_actions.htm)
