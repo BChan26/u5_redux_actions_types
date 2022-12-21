@@ -1,3 +1,5 @@
+## SEIR
+
 # Redux Actions and Types
 
 ![](https://redux.js.org/img/tutorials/essentials/ReduxDataFlowDiagram.gif)
